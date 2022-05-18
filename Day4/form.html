@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FormValidation</title>
+   
+</head>
+<body>
+   <form  method="get" onsubmit="event.preventDefault(); onSubmitListner();">
+      <div class="form" id="form">
+         <h1>Form Validation</h1>
+         <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="name">
+            <span id="name_err"></span>
+         </div>
+         <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="email">
+            <span id="email_err"></span>
+         </div>
+         <div>
+            <label for="phone">Phone</label>
+            <input type="phone" name="phone" id="phone" class="phone">
+            <span id="number_err"></span>
+         </div>
+         <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="password">
+            <span id = "password_err"></span>
+         </div>
+         <div>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" class="confirmPassword">
+            <span id="confirm_password_err"></span>
+         </div>
+         <div>
+            <input type="submit" name="submit" id="submit" class="submit">
+         </div>
+      </div>
+      <span id="success"></span>
+   </form>
+
+   <script src="script.js"></script>
+</body>
+</html>
