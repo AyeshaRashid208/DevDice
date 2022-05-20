@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Infinite</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body  class="continer" id="content">
+      <h1>INFINTE SCROLL</h1>
+      <input type="text" placeholder="Type here to search" id="srch" onkeyup="search()">
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+      <div class="text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore.
+         Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.
+      </div>
+   <script>
+        
+      let content = document.getElementById("content");
+     
+      window.addEventListener('scroll',
+      function scroll() {
+         while(true)
+         {
+            //bottom of the documnet content length
+            let bottom = document.documentElement.getBoundingClientRect().bottom;
+           
+            if (bottom > document.documentElement.clientHeight + 120) break;
+           
+            document.body.insertAdjacentHTML("beforeend", `<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas quam dignissimos excepturi debitis omnis, officia ut aspernatur, eos aperiam tempore error. Quasi, consequuntur! Commodi rerum maxime veniam eius inventore. Voluptates laudantium, laboriosam delectus at, repellendus molestiae sed natus accusamus perspiciatis inventore distinctio eaque quis quo rem est quisquam, iste cumque? Nisi iste veritatis laudantium eveniet autem asperiores rem sit.</div>`);
+         }
+      });
+
+     function search()
+     {
+         let search = document.getElementById("srch").value.toLowerCase();
+         let divs = document.getElementsByClassName("text");
+         for (let index = 0; index < divs.length; index++)
+         {
+               const element = divs[index];
+               let show = element.innerHTML.toLowerCase().includes(search);
+               if(show)
+                        document.getElementsByClassName("text")[index].style.display = "";
+               else
+                  document.getElementsByClassName("text")[index].style.display = "none";
+         }
+     }
+
+   </script>
+</body>
+</html>

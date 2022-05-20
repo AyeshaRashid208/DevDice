@@ -1,0 +1,31 @@
+body{
+    margin: 0%;
+    padding: 0%;
+ }
+ .continer
+ {
+    background-color: rgb(92, 92, 247);
+    margin: 0;
+    padding: 5px;
+    min-height: 100vh;
+ }
+ .text
+ {
+    border: 1px solid rgb(243, 243, 248);
+    background-color: whitesmoke;
+    border-radius: 15px;
+    margin: 2% 12%;
+    padding: 3%;
+ }
+ h1
+ {
+    color: rgb(234, 234, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+ }
+ #srch{
+    border: blue 2px inset;
+    border-radius: 2px;
+    padding: 5px;
+    margin-left: 43%;
+ }
